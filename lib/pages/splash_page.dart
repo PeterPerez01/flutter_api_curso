@@ -24,7 +24,6 @@ class _SplashPageState extends State<SplashPage> {
 
   Future<void> _checkLogin() async {
     final token = await _authenticationClient.accessToken;
-    Logs.p.i(token);
     if (token == null) {
       Navigator.pushReplacementNamed(
         context,

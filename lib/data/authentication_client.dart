@@ -4,7 +4,6 @@ import 'dart:convert';
 import 'package:api_application/Api/authentication_api.dart';
 import 'package:api_application/models/authentication_response.dart';
 import 'package:api_application/models/session.dart';
-import 'package:api_application/utils/logs.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 class AuthenticationClient {
@@ -25,7 +24,6 @@ class AuthenticationClient {
     if (_completer != null) {
       await _completer!.future;
     }
-    Logs.p.i("called ${DateTime.now()}");
     _completer = Completer();
 
     final data = await _secureStorage.read(key: 'SESSION');
@@ -36,7 +34,6 @@ class AuthenticationClient {
       final DateTime createdAt = session.createdAt;
       final int expiresIn = session.expiresIn;
       final int diff = currentDate.difference(createdAt).inSeconds;
-      Logs.p.i("session life time ${expiresIn - diff}");
 
       if (expiresIn - diff >= 60) {
         _complete();

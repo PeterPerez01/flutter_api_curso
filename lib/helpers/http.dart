@@ -37,7 +37,6 @@ class Http {
         queryParameters: queryParameters,
         data: formData != null ? FormData.fromMap(formData) : data,
       );
-      Logs.p.i(response.data);
 
       if (parser != null) {
         return HttpResponse.success<T>(parser(response.data));
