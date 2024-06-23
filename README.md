@@ -1,6 +1,6 @@
 # Login and Register API Flutter APP
 
-Flutter project made in the course of Darwin Morocho
+Flutter project for consuming an API REST 
 
 ## More info
 
