@@ -4,7 +4,7 @@ Flutter project for consuming an API REST
 
 ## More info
 
-This project was made for the Mobile Devices Programming assignature.
+This project was made for the Mobile Devices Programming competence.
 
 By Peter Alejandro Pérez Chel
 
